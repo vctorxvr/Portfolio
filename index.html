@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://getbootstrap.com/1.2.0/assets/css/bootstrap-1.2.0.min.css">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../img/icones/favicon.ico">
+  <title> Jair Victor </title>
+
+
+
+
+  
+
+
+  <style type="text/css">
+    /*Profile Pic Start*/
+.picture-container{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.picture{
+    width: 180px;
+    height: 180px;
+    background-color: #999999;
+    border: 4px solid #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+.picture:hover{
+    border-color: #2ca8ff;
+}
+.content.ct-wizard-green .picture:hover{
+    border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover{
+    border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover{
+    border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover{
+    border-color: #ff3b30;
+}
+.picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.picture-src{
+    width: 100%;
+    
+}
+/*Profile Pic End*/
+  </style>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<script>
+  $(document).ready(function(){
+// Prepare the preview for profile picture
+    $("#wizard-picture").change(function(){
+        readURL(this);
+    });
+});
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+             $('#wizardPicturePreviewPerfil').attr('src', e.target.result).fadeIn('slow');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+// verificando se o storage possui a variável setada, caso contrário exibe o popup
+if (!window.sessionStorage.getItem("popup-exibida"))
+{
+     // jquery ready start
+$(window).on('load',function(){
+    var delayMs = 1000; // delay in milliseconds
+
+    setTimeout(function(){
+        $('#modalQuickView').modal('show');
+    }, delayMs);
+
+});
+}
+
+ window.sessionStorage.setItem("popup-exibida", "1");
+
+    
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+// Gets the video src from the data-src on each button
+
+var $videoSrc;  
+$('.video-btn').click(function() {
+    $videoSrc = $(this).data( "src" );
+});
+console.log($videoSrc);
+
+  
+  
+// when the modal is opened autoplay it  
+$('#modalVideo').on('shown.bs.modal', function (e) {
+    
+// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+})
+  
+
+
+// stop playing the youtube video when I close the modal
+$('#modalVideo').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").attr('src',$videoSrc); 
+}) 
+    
+    
+
+
+  
+  
+// document ready  
+});
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="curriculo/css/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="curriculo/css/bootstrap.css" rel="stylesheet">
+    <link href="curriculo/css/aos.css" rel="stylesheet">
+    <link href="curriculo/css/main.css" rel="stylesheet">
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+
+
+  <body id="top">
+    <header class="d-print-none">
+      <div class="container text-center text-lg-left">
+        <div class="py-3 clearfix">
+          <h1 class="site-title mb-0"></h1>
+          <div class="site-nav">
+            <nav role="navigation">
+                
+      
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-content">
+      <div class="container">
+<div class="cover shadow-lg bg-white">
+    <div class="cover-bg p-3 p-lg-4 text-white" style="">
+
+
+
+
+  <script>
+ $(document).ready(function() {
+    // show the alert
+    setTimeout(function() {
+        $(".alert").alert('close');
+    }, 12000);
+});
+</script>
+  
+      
+
+
+
+  </div>
+
+  <style type="text/css">
+  	.teste{
+  		width: 84%;
+  		margin-left: 8%;
+  	}
+  </style>
+
+  <div class="teste">
+  	 <header class="d-print-none">
+      <div class="container text-center text-lg-left">
+        <div class="py-3 clearfix">
+          <h1 class="site-title mb-0"> Curriculum Vitae</h1>
+          <div class="site-nav">
+            <nav role="navigation" > 
+
+              <ul class="nav justify-content-center">
+                <li class="nav-item"> 	<a class='nav-link'  target='_blank' title='linkedin' href='https://www.linkedin.com/in/victor-xavier-91850116b/'>  <i class="fab fa-linkedin-in"></i><span class="menu-title sr-only">linkedin</span></a>
+                </li>
+                <li class="nav-item"><a class='nav-link'  target='_blank' title='Facebook' href='https://www.facebook.com/vctorxavier/'> <i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
+                </li>
+                <li class="nav-item"><a class='nav-link'  target='_blank' title='Instagram' href='https://www.instagram.com/vctorxvr/'> <i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
+                </li>
+                <li class="nav-item"><a class='nav-link'  target='_blank' title='GitHub' href='https://github.com/vctorxvr'> <i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+
+
+    <div class="row">
+      <div class="col-lg-4 col-md-5">
+
+ <form class="form"  id="registrationForm"  method="post" enctype="multipart/form-data" action="">
+                     
+
+
+                      <div class="form-group">
+                          <div class="col-xs-12 col-md-12 col-lg-12">
+                            
+             
+    <div class="picture-container">
+        <div class="picture">
+            <img src="imagens/164745861662323938dd63e.jpg" class="picture-src" id="wizardPicturePreview" title="" width="auto" height="auto">
+         
+        </div>
+
+    </div>
+
+    
+</div>
+
+</div>
+ 
+                            
+                               
+                   
+</form>
+
+
+
+    
+      </div>
+
+
+
+      <div class="col-lg-7 col-md-7 text-center text-md-start">
+        <h2 class="h1 mt-2" data-aos="fade-left" data-aos-delay="0">JAIR VICTOR JACINTO XAVIER</h2>
+        <p data-aos="fade-left" data-aos-delay="100">Objetivo:     Desenvolvedor Front-End & Back-End</p>
+        <div class="d-print-none" data-aos="fade-left" data-aos-delay="200">
+        	<a class="btn btn-light text-dark shadow-sm mt-1 me-1" href="imagens/JairVictor.pdf" target="_blank">Baixar CV</a>
+        	<a class="btn btn-success  text-dark shadow-sm mt-1 me-1" href="" target="_blank">Editar CV</a>
+        	<a class="btn btn-primary text-dark shadow-sm mt-1" href="">Compartilhar</a></div>
+      </div>
+    </div>
+
+
+
+
+
+
+ 
+  <div class="about-section pt-4 px-3 px-lg-4 mt-1">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="h3 mb-3">Sobre mim</h2>
+        <p>   Sou um desenvolvedor front-end junior em ferramentas de desenvolvimento de software, como: HTML5, CSS3, JavaScript, Framework bootstrap, Banco de dados Relacional e PHP 7.</p>
+      </div>
+      <div class="col-md-5 offset-md-1">
+        <div class="row mt-2">
+          <div class="col-sm-4">
+            <div class="pb-1">Idade:</div>
+          </div>
+          <div class="col-sm-8">
+            <div class="pb-1 text-secondary"> Brasileiro(a), Solteiro, 25 Anos</div>
+          </div>
+          <div class="col-sm-4">
+            <div class="pb-1">E-mail:</div>
+          </div>
+          <div class="col-sm-8">
+            <div class="pb-1 text-secondary"> victorxavier2609@gmail.com </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="pb-1">Tel :</div>
+          </div>
+          <div class="col-sm-8">
+            <div class="pb-1 text-secondary"> 92 993765130</div>
+          </div>
+          <div class="col-sm-4">
+            <div class="pb-1">Endereço</div>
+          </div>
+          <div class="col-sm-8">
+            <div class="pb-1 text-secondary">Rua das Juremas, nº 504, Amazonas, Brasil. </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+     
+
+
+
+      <hr class='d-print-none'/><div class='page-break'></div><div class='education-section px-3 px-lg-4 pb-4'><h2 class='h3 mb-4'>Formação</h2><div class='timeline'>
+ <div class="row">
+ <div class="col-xs-12 col-md-12 col-lg-12 no-padding">
+<div class="timeline-card timeline-card-success card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1"> Ensino Médio (Completo)<span class="text-muted h6"> no(a) EE Nossa Senhora de Nazare</span></div>
+          <div class="text-muted text-small mb-2"> 10/01/2011 - 10/12/2014, período de 3 anos</div>
+          <div> Conclusão da minha base educacional, período na qual participei de varias eletivas e projetos científicos. </div>
+        </div>
+      </div>
+      </div> 
+      </div>
+ <div class="row">
+ <div class="col-xs-12 col-md-12 col-lg-12 no-padding">
+<div class="timeline-card timeline-card-success card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1"> Sistema de Informação (Concluido)<span class="text-muted h6"> no(a) Centro universitário Fametro</span></div>
+          <div class="text-muted text-small mb-2"> 10/01/2017 - 10/12/2021, período de 4 anos</div>
+          <div> Conclusão da graduação em Sistema de Informação com foco em desenvolvimento web, gerenciamento de sistemas e segurança da informação, período no qual participei de vários projetos e laboratório de desenvolvimento e mentorias de software. </div>
+        </div>
+      </div>
+      </div> 
+      </div></div></div>      
+
+
+
+
+
+     
+
+
+
+      
+  
+
+
+
+
+
+
+
+
+ 
+
+
+
+    	<hr class='d-print-none'/><div class='work-experience-section px-3 px-lg-4'><h2 class='h3 mb-4'>Experiência profissional</h2> <div class='timeline'><div class='row'>
+ <div class="col-xs-12 col-md-6 col-lg-6 no-padding">
+                               <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1"> Técnico Informática <span class="text-muted h6"> no(a) Dinamica Comercio e Serviços</span></div>
+          <div class="text-muted text-small mb-2"> outubro de 2021 ate maio de 2022 </div>
+          <div>Instalação e configuração de controle de acessos e pontos eletrônicos e catracas TopData, câmeras, CFTV, servidor Windows, suporte a usuários, gerenciamento de chamados, reparação, limpeza e montagem de computadores.</div>
+        </div>
+      </div>
+      </div>
+ <div class="col-xs-12 col-md-6 col-lg-6 no-padding">
+                               <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1"> Analista de Suporte <span class="text-muted h6"> no(a) Panasonic</span></div>
+          <div class="text-muted text-small mb-2">  Atualmente </div>
+          <div>HelpDesk nivel 1 e 2, montagem e manutenção de computadores, gerenciamento de chamado (JIRA), verificação e manutenção preventiva de redes</div>
+        </div>
+      </div>
+      </div>
+ <div class="col-xs-12 col-md-6 col-lg-6 no-padding">
+                               <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1"> Estágio <span class="text-muted h6"> no(a) Tribunal de Contas do Estado do Amazonas</span></div>
+          <div class="text-muted text-small mb-2">  novembro de 2019 a  novembro de 2021 </div>
+          <div>Atuei na organização como suporte nível 1 e 2 e desenvolvimento em pares na plataforma web na qual estive presente na implantação e gerenciamento da base de dados da instituição SPEDE e SEI!.</div>
+        </div>
+      </div>
+      </div></div></div></div>
+      
+
+
+
+
+
+
+  <hr class="d-print-none"/>
+  <div class="skills-section px-3 px-lg-4">
+    <h2 class="h3 mb-3"> Habilidades Profissionais
+     </h2>
+    <div class="row"><div class="col-md-6">
+<div class="mb-2"><span>Python - Domínio de 30%</span>
+          <div class="progress my-1">
+            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 30%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div> <div class="col-md-6">
+        <div class="mb-2"><span>JS - Domínio de 70%</span>
+          <div class="progress my-1">
+            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 70%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+       
+       
+      </div><div class="col-md-6">
+<div class="mb-2"><span>JAVA - Domínio de 50%</span>
+          <div class="progress my-1">
+            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 50%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div> <div class="col-md-6">
+        <div class="mb-2"><span>C - Domínio de 40%</span>
+          <div class="progress my-1">
+            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 40%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+       
+       
+      </div><div class="col-md-6">
+<div class="mb-2"><span>C++ - Domínio de 60%</span>
+          <div class="progress my-1">
+            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>    </div>
+  </div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <hr class="d-print-none"/>
+  <div class="skills-section px-3 px-lg-4">
+    <h2 class="h3 mb-3"> Idiomas
+     </h2>
+    <div class="row"><div class="col-md-6">
+<div class="mb-2"><span>Inglês - proficiência de 80%</span>
+          <div class="progress my-1">
+            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div> <div class="col-md-6">
+        <div class="mb-2"><span>Espanhol - proficiência de 50%</span>
+          <div class="progress my-1">
+            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 50%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+       
+       
+      </div>    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <hr class="d-print-none"/>
+
+
+
+
+
+
+
+
+
+  <div class="contant-section px-3 px-lg-4 pb-4" id="contact">
+    <h2 class="h3 text mb-3">Contate-me</h2>
+    <div class="row">
+      <div class="col-md-7 d-print-none">
+        <div class="my-2"><form action="emailcurriculum/processa.php"
+    method="POST">
+  <div class="row">
+    <div class="col-6">
+      <input class="form-control" type="text" id="name" name="name" placeholder="Seu nome" required>
+    </div>
+    <div class="col-6">
+      <input class="form-control" type="email" id="email" name="email" placeholder="Seu e-mail" required>
+    </div>
+  </div>
+  <div class="form-group my-2">
+    <input class="form-control" style="resize: none;" id="phone" name="phone" rows="4"  placeholder="Sua mensagem" required>
+  </div>
+  <div class="form-group my-2">
+    <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4"  placeholder="Sua mensagem" required></textarea>
+  </div>
+  <input type="text" style="display: none;" name="destino" value="victorxavier2609@gmail.com" >
+  <button class="btn btn-primary mt-2" type="submit">Contatar Victor</button>
+</form>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mt-2">
+          <h3 class="h6">Endereço</h3>
+          <div class="pb-2 text-secondary">Rua das Juremas, nº 504, Amazonas, Brasil.</div>
+          <h3 class="h6">Telefone</h3>
+          <div class="pb-2 text-secondary">92 993765130</div>
+          <h3 class="h6">E-mail</h3>
+          <div class="pb-2 text-secondary">victorxavier2609@gmail.com</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+   <div class="cover-bg p-3 p-lg-4 text-white" style="border-radius: 10px; background-color: white;">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="pt-4 pb-4 text-muted text-center d-print-none">
+      <div class="container">
+        <div class="my-3">
+          
+              </ul>
+            </nav>
+          </div>
+        </div>
+        
+          
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+</div>
+    </div>
+   
+    <script src="curriculo/scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
+    <script src="curriculo/scripts/aos.js?ver=1.2.0"></script>
+    <script src="curriculo/scripts/main.js?ver=1.2.0"></script>
+  </body>
+
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/chart.min.js"></script>
+  <script src="js/chart-data.js"></script>
+  <script src="js/easypiechart.js"></script>
+  <script src="js/easypiechart-data.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+    window.onload = function () {
+  var chart1 = document.getElementById("line-chart").getContext("2d");
+  window.myLine = new Chart(chart1).Line(lineChartData, {
+  responsive: true,
+  scaleLineColor: "rgba(0,0,0,.2)",
+  scaleGridLineColor: "rgba(0,0,0,.05)",
+  scaleFontColor: "#c5c7cc"
+  });
+};
+  </script>
+
+
+
+
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-lg-4 col-md-12 mb-4">
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      
+      <div class="modal-body mb-0 p-0">
+
+
+          
+        <!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+</div>
+
+ <div class="modal-footer justify-content-center">
+            <span class="mr-4"> Redes Sociais</span>
+
+
+
+
+           
+
+               <form action="aulas.php" method="post">
+  <input type="submit" class="btn btn-secondary" value="Fechar">
+  
+
+</form>
+           
+
+          </div>
+
+
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div> 
+
+
+
+
+
+
+
+  </div>
+
+
+</div>
+<!-- Grid row -->
+
+
+
+
+
+
+
+      <style type="text/css">
+    
+#fixo {
+    position: fixed;
+    /* deixando o elemento na posição desejada */
+    left: 12%;
+    top: 1%;
+    /* apenas para aparência */
+    background-color: none;
+  
+    width: 300px;
+    height: 100px;
+}
+    </style>
+
+
+    <div id="fixo">
+      
+      <div class="col-lg-7 col-md-7 text-center text-md-start"> 
+          
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
